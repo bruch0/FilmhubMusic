@@ -18,13 +18,13 @@ const Top = styled.section`
     height: auto;
     display: flex;
     justify-content: space-between;
-    margin-top: 50px;
+    margin: 50px 0px 100px 0px;
     padding: 0px 5%;
 `
 
 const Title = styled.h1`
     font-size: 3vw;
-    font-weight: 600;
+    font-weight: 700;
 `
 
 const SearchBarWrapper = styled.div`
