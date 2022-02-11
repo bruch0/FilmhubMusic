@@ -6,6 +6,7 @@ export default function RowsContainer() {
   return (
     <Container>
         <GenreRow genre={'Genre name'} />
+        <GenreRow genre={'Genre name'} />
     </Container>
   )
 }
