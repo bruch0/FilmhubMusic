@@ -1,12 +1,9 @@
 import axios from "axios";
 
-//Since the api was blocking the access on http, I copied the result here, but in production, it will use the actual api :)
+//Since the api blocks the access on http because of cors policy, I copied the result here, sorry for that =/
 
 const getTopSongs = () => {
-    if (process.env.NODE_ENV === 'prod') {
-        axios.get('https://rss.applemarketingtools.com/api/v2/us/music/most-played/50/albums.json').then((response) => response)
-    } 
-    else return {
+    return {
   "feed": {
     "title": "Top Albums",
     "id": "https://rss.applemarketingtools.com/api/v2/us/music/most-played/50/albums.json",
