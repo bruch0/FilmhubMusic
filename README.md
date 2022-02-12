@@ -26,7 +26,6 @@
 
 ## How to run
 
-```
 
 ### Clone this repository
 
