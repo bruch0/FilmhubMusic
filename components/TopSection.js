@@ -1,13 +1,13 @@
 import styled from "styled-components"
 import {FiSearch} from 'react-icons/fi'
 
-export default function TopSection() {
+export default function TopSection({filter, setFilter}) {
   return (
     <Top>
         <Title>Filmhub Music</Title>
         <SearchBarWrapper>
             <FiSearch />
-            <SearchBar placeholder="Search" />
+            <SearchBar value={filter} onChange={(e) => setFilter(e.target.value)} placeholder="Search" />
         </SearchBarWrapper>
     </Top>
   )
