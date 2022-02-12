@@ -8,8 +8,7 @@
 
 <p align="center">
  <a href="#features">Features</a> • 
- <a href="#how-to-run">How to run</a> • 
- <a href="#supported-universities">Supported universities</a>
+ <a href="#how-to-run">How to run</a>
 </p>
 
 
