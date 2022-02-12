@@ -4,7 +4,7 @@ import styled from "styled-components"
 import GenreRow from "./GenreRow"
 import { getTopSongs } from "../service/api"
 
-export default function RowsContainer() {
+export default function RowsContainer({filter}) {
   const [musics, setMusics] = useState([]);
   const [musicPerGenre, setMusicPerGenre] = useState([]);
 
@@ -24,10 +24,9 @@ export default function RowsContainer() {
     setMusicPerGenre(hashMap);
   }), [])
 
-
   return (
     <Container>
-      {Object.keys(musicPerGenre).map((key) => <GenreRow genre={musicPerGenre[key].title} musics={musicPerGenre[key].musics} />)}
+      {Object.keys(musicPerGenre).map((key) => <GenreRow genre={musicPerGenre[key].title} musics={musicPerGenre[key].musics} filter={filter} />)}
     </Container>
   )
 }
