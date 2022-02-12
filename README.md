@@ -13,11 +13,6 @@
 
 
 </br>
-
-<p align="center">
-  <img src="public/icon.png" width="175" alt="universiprovas" />
-</p>
-
 </br>
 
 </br>
