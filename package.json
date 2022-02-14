@@ -1,9 +1,9 @@
 {
   "private": true,
   "scripts": {
-    "dev": "ENV=dev next dev",
+    "dev": "next dev",
     "build": "next build",
-    "start": "ENV=prod next start"
+    "start": "next start"
   },
   "dependencies": {
     "axios": "^0.25.0",
