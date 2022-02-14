@@ -26,6 +26,14 @@ const Genre = styled.h2`
     font-size: 2.5vw;
     font-weight: 500;
     margin-bottom: 20px;
+
+    @media (max-width: 1000px) {
+        font-size: 3vw;
+    }
+
+    @media (max-width: 600px) {
+        font-size: 5vw;
+    }
 `
 
 const Musics = styled.div`

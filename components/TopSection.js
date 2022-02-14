@@ -20,15 +20,32 @@ const Top = styled.section`
     justify-content: space-between;
     margin: 50px 0px 100px 0px;
     padding: 0px 5%;
+
+    @media (max-width: 600px) {
+        flex-direction: column;
+    }
 `
 
 const Title = styled.h1`
     font-size: 3vw;
     font-weight: 700;
+
+    @media (max-width: 1000px) {
+        font-size: 4vw;
+    }
+
+    @media (max-width: 600px) {
+        font-size: 6vw;
+        margin-bottom: 20px;
+    }
+
+    @media (max-width: 400px) {
+        font-size: 8vw;
+    }
 `
 
 const SearchBarWrapper = styled.div`
-    width: 20%;
+    width: 25%;
     padding: 0px 10px;
     border: 1px solid BLACK;
     display: flex;
@@ -38,6 +55,10 @@ const SearchBarWrapper = styled.div`
     svg {
         height: 30px;
         width: 30px;
+    }
+
+    @media (max-width: 600px) {
+        width: 50%;
     }
 `;
 

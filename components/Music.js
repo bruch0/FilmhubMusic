@@ -18,6 +18,16 @@ const Wrapper = styled.a`
     :last-of-type {
         margin: 0px;
     }
+
+    @media (max-width: 1000px) {
+        width: 25%;
+        min-width: 25%;
+    }
+
+    @media (max-width: 600px) {
+        width: 60%;
+        min-width: 60%;
+    }
 `
 
 const AlbumImage = styled.img`
@@ -27,13 +37,29 @@ const AlbumImage = styled.img`
 
 const AlbumName = styled.h3`
     font-weight: 500;
-    font-size: 22px;
+    font-size: 1.5vw;
     margin-bottom: 10px;
     color: black;
+
+    @media (max-width: 1000px) {
+        font-size: 3vw;
+    }
+
+    @media (max-width: 600px) {
+        font-size: 3vw;
+    }
 `
 
 const ArtistName = styled.h3`
     font-weight: 500;
-    font-size: 18px;
+    font-size: 1.2vw;
     color: black;
+
+    @media (max-width: 1000px) {
+        font-size: 2vw;
+    }
+
+    @media (max-width: 600px) {
+        font-size: 2.5vw;
+    }
 `
