@@ -8,6 +8,7 @@
 
 <p align="center">
  <a href="#features">Features</a> • 
+ <a href="#deploy">Deploy</a> • 
  <a href="#how-to-run">How to run</a>
 </p>
 
@@ -15,12 +16,19 @@
 </br>
 </br>
 
-</br>
 
 ## Features
 
 - [x] See the top 50 musics, grouped by genre 
 - [x] Search for a specific song
+
+</br>
+
+## Deploy
+
+<p align="center">
+  Check the deploy <a href="https://filmhub-music.vercel.app/" target="_blank">here</a>
+</p>
 
 </br>
 
