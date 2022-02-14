@@ -4,14 +4,14 @@ import Music from "./Music"
 
 export default function GenreRow({genre, musics, filter}) {
   return (
-      <Wrapper visible={musics.filter((music) => music.name.startsWith(filter)).length}>
+      <Wrapper visible={musics.filter((music) => music.name.toLowerCase().startsWith(filter.toLowerCase())).length}>
         <Genre>{genre}</Genre>
         <Musics>
           {filter ? 
-          musics.filter((music) => music.name.startsWith(filter))
-          .map((music) => <Music name={music.name} artist={music.artistName} url={music.url} image={music.artworkUrl100} />) 
+          musics.filter((music) => music.name.toLowerCase().startsWith(filter.toLowerCase()))
+          .map((music) => <Music key={music.name} name={music.name} artist={music.artistName} url={music.url} image={music.artworkUrl100} />) 
           :
-          musics.map((music) => <Music name={music.name} artist={music.artistName} url={music.url} image={music.artworkUrl100} />)}        </Musics>
+          musics.map((music) => <Music key={music.name} name={music.name} artist={music.artistName} url={music.url} image={music.artworkUrl100} />)}        </Musics>
       </Wrapper>
   )
 }
