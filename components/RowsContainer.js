@@ -5,11 +5,15 @@ import GenreRow from "./GenreRow"
 import { getTopSongs } from "../service/api"
 
 export default function RowsContainer({filter}) {
+  const [loading, setLoading] = useState(true);
   const [musics, setMusics] = useState([]);
   const [musicPerGenre, setMusicPerGenre] = useState([]);
 
-  useEffect((() => {
-    setMusics(getTopSongs().feed.results);
+  useEffect(() => {
+    getTopSongs().then((response) => {
+      setMusics(response.feed.results)
+      setLoading(false);
+    })
 
     const hashMap = {};
 
@@ -21,12 +25,16 @@ export default function RowsContainer({filter}) {
       })
     })
 
+    delete hashMap[34]; // It's a genre called 'Music', so it has all the songs
+
     setMusicPerGenre(hashMap);
-  }), [])
+  }, [loading])
+
+  if (loading) return 'Loading...'
 
   return (
     <Container>
-      {Object.keys(musicPerGenre).map((key) => <GenreRow genre={musicPerGenre[key].title} musics={musicPerGenre[key].musics} filter={filter} />)}
+      {Object.keys(musicPerGenre).map((key) => <GenreRow key={musicPerGenre[key].title} genre={musicPerGenre[key].title} musics={musicPerGenre[key].musics} filter={filter} />)}
     </Container>
   )
 }
